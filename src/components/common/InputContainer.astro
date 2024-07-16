@@ -1,0 +1,21 @@
+---
+import Input from "./Input.astro";
+import Select from "./Select.astro";
+import Textarea from "./Textarea.astro";
+
+import Button from "./Button.astro";
+import Link from "./Link.astro";
+---
+
+<div class="input-container">
+	<slot />
+	<div class="input-container__btn-box">
+		<Button background="solid" border="solid" hover="brightness" form="send"
+			>Wyślij
+		</Button>
+		<p>
+			<i class="ti ti-exclamation-circle"></i> Wysyłając formularz akceptujesz naszą
+			<Link href="" targetBlank>politykę prywatności</Link>.
+		</p>
+	</div>
+</div>

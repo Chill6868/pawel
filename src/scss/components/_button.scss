@@ -1,0 +1,134 @@
+@use "../abstracts" as *;
+
+// ===========================================================================
+// Button Component
+// ===========================================================================
+
+.btn {
+	cursor: pointer;
+	overflow: hidden;
+	position: relative;
+	padding: $btn-padding;
+	color: $btn-color;
+	font-weight: $btn-font-weight;
+	background: transparent;
+	border: none;
+	border-radius: $btn-border-radius;
+
+	&__background,
+	&__border {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		border-radius: $btn-border-radius;
+		transition: filter 0.3s;
+	}
+
+	&__background {
+		&--solid {
+			background: $btn-solid-color;
+		}
+
+		&--gradient {
+			background: $btn-gradient-color;
+		}
+
+		&--transparent {
+			background: transparent;
+		}
+	}
+
+	&__border {
+		&--solid {
+			border: $btn-border-width solid $btn-solid-color;
+		}
+
+		&--gradient {
+			border: $btn-border-width solid transparent;
+			background: $btn-gradient-color border-box;
+			-webkit-mask: linear-gradient(#fff 0 0) padding-box,
+				linear-gradient(#fff 0 0);
+			mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+			-webkit-mask-composite: destination-out;
+			mask-composite: exclude;
+		}
+	}
+
+	&__text {
+		position: relative;
+	}
+
+	&__hover {
+		&--brightness {
+			&:hover {
+				.btn__background,
+				.btn__border {
+					filter: brightness(0.7);
+				}
+			}
+		}
+	}
+
+	&__click {
+		&--pulse {
+			position: absolute;
+			transform: translate(-50%, -50%);
+			// background-color: rgba(255, 0, 255, 0.5);
+			background-color: rgba(255, 255, 255, 0.1);
+			border-radius: 50%;
+			pointer-events: none;
+			opacity: 1;
+			transition: opacity 0.3s;
+			animation: clickAnimationPulse 0.3s forwards;
+
+			@keyframes clickAnimationPulse {
+				from {
+					width: 0;
+					height: 0;
+				}
+				to {
+					width: var(--animation-size);
+					height: var(--animation-size);
+				}
+			}
+
+			&--hide {
+				opacity: 0;
+			}
+		}
+	}
+
+	&--disabled {
+		opacity: 0.75;
+		cursor: wait;
+
+		.btn__background {
+			&--solid {
+				background: $btn-solid-disabled-color;
+			}
+
+			&--gradient {
+				background: $btn-gradient-disabled-color;
+			}
+		}
+
+		.btn__border {
+			&--solid {
+				border: $btn-border-width solid $btn-solid-disabled-color;
+			}
+
+			&--gradient {
+				background: $btn-gradient-disabled-color border-box;
+			}
+		}
+
+		&:hover {
+			.btn__background,
+			.btn__border {
+				filter: none;
+			}
+		}
+	}
+}

@@ -1,0 +1,20 @@
+{
+	"name": "",
+	"type": "module",
+	"version": "0.0.1",
+	"scripts": {
+		"dev": "astro dev",
+		"start": "astro dev",
+		"build": "astro build",
+		"preview": "astro preview",
+		"astro": "astro"
+	},
+	"dependencies": {
+		"@astrojs/netlify": "^5.4.0",
+		"@fontsource-variable/inter": "^5.0.19",
+		"astro": "^4.11.5"
+	},
+	"devDependencies": {
+		"sass": "^1.77.7"
+	}
+}

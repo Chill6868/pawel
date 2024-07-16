@@ -1,0 +1,41 @@
+@use "../abstracts" as *;
+
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+}
+
+a {
+	color: inherit;
+	font-size: inherit;
+	text-decoration: none;
+	cursor: pointer;
+	-webkit-tap-highlight-color: transparent;
+}
+
+input,
+button,
+textarea,
+select {
+	color: inherit;
+	font-family: inherit;
+	font-size: inherit;
+}
+
+button {
+	border: none;
+	font-size: inherit;
+	cursor: pointer;
+}
+
+img {
+	display: inline-block;
+}

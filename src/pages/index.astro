@@ -1,0 +1,60 @@
+---
+// Layout
+import LayoutMain from "../layouts/LayoutMain.astro";
+
+// Components
+import Button from "../components/common/Button.astro";
+import Link from "../components/common/Link.astro";
+import Input from "../components/common/Input.astro";
+import Select from "../components/common/Select.astro";
+import Textarea from "../components/common/Textarea.astro";
+import InputContainer from "../components/common/InputContainer.astro";
+
+const head = {
+	title: "Example",
+	description: "desc",
+};
+---
+
+<LayoutMain title=`${head.title}`>
+	<main>index</main>
+	<Button background="gradient" border="gradient">Button</Button>
+	<Button background="solid" border="solid" hover="brightness">Button</Button>
+	<Link href="https://youtube.pl">strzała</Link>
+	<Link href="https://youtube.pl" targetBlank hover="brightness">strzała</Link>
+	<h1>Lorem ipsum dolor sit amet.</h1>
+	<h2>Lorem ipsum dolor sit amet.</h2>
+	<h3>Lorem ipsum dolor sit amet.</h3>
+	<h4>Lorem ipsum dolor sit amet.</h4>
+	<p>
+		Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum quia dolorem
+		quae vel eum fuga labore enim, mollitia cumque impedit?
+	</p>
+	<small
+		>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis error, esse
+		aspernatur velit modi alias minima ad blanditiis explicabo nisi!</small
+	>
+	<section class="section-p">
+		<div class="wrapper">
+			<h2>Section title</h2>
+			<form>
+				<InputContainer>
+					<Input type="text" id="name" name="name">
+						<span slot="label">Label</span>
+						<span slot="requirements">Requirements.</span>
+					</Input>
+					<Select id="category" name="category">
+						<span slot="label">Label</span>
+						<span slot="requirements">Requirements.</span>
+					</Select>
+					<Textarea id="description" name="description">
+						<span slot="label">Label</span>
+						<span slot="requirements">Requirements.</span>
+					</Textarea>
+				</InputContainer>
+			</form>
+		</div>
+	</section>
+
+	<script src="../js/components/form.js"></script>
+</LayoutMain>

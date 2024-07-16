@@ -1,0 +1,45 @@
+// ===========================================================================
+// Variables
+// ===========================================================================
+
+// General
+$border-radius: 8px;
+$color-text: #222;
+// $color-text: #fff;
+$color-background: #fff;
+$color-border: gray;
+
+$color-500: lime;
+$color-500: rgb(79, 16, 194);
+
+// Typography
+$font-size-md: 1.6rem;
+$font-size-md: 1.6rem;
+
+$font-scale-sm: 1.2;
+$font-scale-md: 1.325;
+$font-scale-lg: 1.4;
+$font-scale-xl: 1.475;
+$font-scale-xxl: 1.525;
+$font-scale-xxxl: 1.575;
+
+// Button
+$btn-color: #fff;
+$btn-font-weight: 400;
+$btn-padding: 1.5rem 3rem;
+$btn-border-radius: $border-radius;
+$btn-border-width: 2px;
+
+$btn-solid-color: rgb(79, 16, 194);
+$btn-gradient-color: linear-gradient(
+	135deg,
+	rgb(56, 164, 110) 0%,
+	rgb(13, 55, 109) 100%
+);
+
+$btn-solid-disabled-color: rgb(48, 48, 48);
+$btn-gradient-disabled-color: linear-gradient(
+	135deg,
+	rgb(48, 48, 48) 0%,
+	rgb(90, 90, 90) 100%
+);

@@ -1,0 +1,24 @@
+---
+interface Props {
+	label?: "inside" | "outside";
+	id: string;
+	name: string;
+}
+
+const { label = "inside", id, name } = Astro.props;
+---
+
+<div class="input-container__box">
+	<label
+		class={`input-container__label ${label === "inside" ? `input-container__label--${label}` : ""}`.trim()}
+		for={`${id}`}><slot name="label" /></label
+	>
+	<textarea class="input-container__textarea" id={`${id}`} name={`${name}`}
+	></textarea>
+	<p class="input-container__requirements">
+		<span class="requirements-icon">
+			<i class="ti ti-exclamation-circle"></i>
+		</span>
+		<slot name="requirements" />
+	</p>
+</div>

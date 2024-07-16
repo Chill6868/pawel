@@ -1,0 +1,44 @@
+// ===========================================================================
+// Custom Made Wrapper, Inspired by Booststrap <3
+// ===========================================================================
+
+.wrapper {
+	border: 1px solid limegreen;
+	width: calc(100% - 3.2rem);
+	margin: 0 auto;
+
+	&--w100 {
+		border: 1px solid limegreen;
+		width: 100%;
+	}
+}
+
+@media (min-width: 576px) {
+	.wrapper {
+		width: 540px;
+	}
+}
+
+@media (min-width: 768px) {
+	.wrapper {
+		width: 720px;
+	}
+}
+
+@media (min-width: 992px) {
+	.wrapper {
+		width: 960px;
+	}
+}
+
+@media (min-width: 1200px) {
+	.wrapper {
+		width: 1140px;
+	}
+}
+
+@media (min-width: 1400px) {
+	.wrapper {
+		width: 1320px;
+	}
+}

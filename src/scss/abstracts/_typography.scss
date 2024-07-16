@@ -1,0 +1,199 @@
+@use "./variables" as *;
+
+// ===========================================================================
+// Typography
+// ===========================================================================
+
+body {
+	font-family: "Inter Variable", sans-serif;
+	font-size: $font-size-md;
+	color: $color-text;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	text-wrap: balance;
+	font-family: "Inter Variable", sans-serif;
+}
+
+$font-size-lg: calc($font-size-md * $font-scale-sm);
+$font-size-xl: calc($font-size-lg * $font-scale-sm);
+$font-size-xxl: calc($font-size-xl * $font-scale-sm);
+$font-size-xxxl: calc($font-size-xxl * $font-scale-sm);
+
+h1,
+.fz-xxl {
+	font-size: $font-size-xxxl;
+	font-weight: 800;
+}
+
+h2,
+.fz-xxl {
+	font-size: $font-size-xxl;
+}
+
+h3,
+.fz-xl {
+	font-size: $font-size-xl;
+}
+
+h4,
+.fz-lg {
+	font-size: $font-size-lg;
+}
+
+.fz-md {
+	font-size: $font-size-md;
+}
+
+.fz-sm {
+	font-size: calc($font-size-md * 0.875);
+}
+
+.fwb {
+	font-weight: 700;
+}
+
+.tac {
+	text-align: center;
+	text-wrap: balance;
+}
+
+@media (min-width: 576px) {
+	$font-size-lg: calc($font-size-md * $font-scale-md);
+	$font-size-xl: calc($font-size-lg * $font-scale-md);
+	$font-size-xxl: calc($font-size-xl * $font-scale-md);
+	$font-size-xxxl: calc($font-size-xxl * $font-scale-md);
+
+	h1,
+	.fz-xxl {
+		font-size: $font-size-xxxl;
+	}
+
+	h2,
+	.fz-xxl {
+		font-size: $font-size-xxl;
+	}
+
+	h3,
+	.fz-xl {
+		font-size: $font-size-xl;
+	}
+
+	h4,
+	.fz-lg {
+		font-size: $font-size-lg;
+	}
+}
+
+@media (min-width: 768px) {
+	$font-size-lg: calc($font-size-md * $font-scale-lg);
+	$font-size-xl: calc($font-size-lg * $font-scale-lg);
+	$font-size-xxl: calc($font-size-xl * $font-scale-lg);
+	$font-size-xxxl: calc($font-size-xxl * $font-scale-lg);
+
+	h1,
+	.fz-xxl {
+		font-size: $font-size-xxxl;
+	}
+
+	h2,
+	.fz-xxl {
+		font-size: $font-size-xxl;
+	}
+
+	h3,
+	.fz-xl {
+		font-size: $font-size-xl;
+	}
+
+	h4,
+	.fz-lg {
+		font-size: $font-size-lg;
+	}
+}
+
+@media (min-width: 992px) {
+	$font-size-lg: calc($font-size-md * $font-scale-xl);
+	$font-size-xl: calc($font-size-lg * $font-scale-xl);
+	$font-size-xxl: calc($font-size-xl * $font-scale-xl);
+	$font-size-xxxl: calc($font-size-xxl * $font-scale-xl);
+
+	h1,
+	.fz-xxl {
+		font-size: $font-size-xxxl;
+	}
+
+	h2,
+	.fz-xxl {
+		font-size: $font-size-xxl;
+	}
+
+	h3,
+	.fz-xl {
+		font-size: $font-size-xl;
+	}
+
+	h4,
+	.fz-lg {
+		font-size: $font-size-lg;
+	}
+}
+
+@media (min-width: 1200px) {
+	$font-size-lg: calc($font-size-md * $font-scale-xxl);
+	$font-size-xl: calc($font-size-lg * $font-scale-xxl);
+	$font-size-xxl: calc($font-size-xl * $font-scale-xxl);
+	$font-size-xxxl: calc($font-size-xxl * $font-scale-xxl);
+
+	h1,
+	.fz-xxl {
+		font-size: $font-size-xxxl;
+	}
+
+	h2,
+	.fz-xxl {
+		font-size: $font-size-xxl;
+	}
+
+	h3,
+	.fz-xl {
+		font-size: $font-size-xl;
+	}
+
+	h4,
+	.fz-lg {
+		font-size: $font-size-lg;
+	}
+}
+
+@media (min-width: 1400px) {
+	$font-size-lg: calc($font-size-md * $font-scale-xxxl);
+	$font-size-xl: calc($font-size-lg * $font-scale-xxxl);
+	$font-size-xxl: calc($font-size-xl * $font-scale-xxxl);
+	$font-size-xxxl: calc($font-size-xxl * $font-scale-xxxl);
+
+	h1,
+	.fz-xxl {
+		font-size: $font-size-xxxl;
+	}
+
+	h2,
+	.fz-xxl {
+		font-size: $font-size-xxl;
+	}
+
+	h3,
+	.fz-xl {
+		font-size: $font-size-xl;
+	}
+
+	h4,
+	.fz-lg {
+		font-size: $font-size-lg;
+	}
+}

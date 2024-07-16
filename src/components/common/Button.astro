@@ -1,0 +1,30 @@
+---
+interface Props {
+	background?: "solid" | "gradient" | "transparent";
+	border?: "solid" | "gradient";
+	hover?: "brightness" | "solid" | "gradient";
+	click?: "pulse" | "none";
+	form?: "send" | "clear";
+}
+
+const {
+	background = "solid",
+	border = "solid",
+	hover = "brightness",
+	click = "pulse",
+	form = "none",
+} = Astro.props;
+---
+
+<button
+	class={`btn ${hover ? `btn__hover--${hover}` : ""} ${click !== "none" ? `btn__click-${click}` : ""} ${form !== "none" ? `btn-form-${form}` : ""}`.trim()}
+>
+	<div class={`btn__background btn__background--${background}`}></div>
+	<div class={`btn__border btn__border--${border}`}></div>
+	<span class="btn__text">
+		<slot />
+	</span>
+</button>
+
+<!-- Click animation -->
+<script src="../../js/components/buttonClick.js"></script>
